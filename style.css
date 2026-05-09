@@ -474,6 +474,34 @@
     .sticky-image-wrapper { position: static; }
     .product-main-title { font-size: 26px; }
 }
+.whatsapp-order-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; /* WhatsApp Green */
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    border: none;
+}
+
+.whatsapp-order-btn i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.whatsapp-order-btn:hover {
+    background-color: #128C7E; /* Darker Green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
 
 
 
