@@ -1,0 +1,820 @@
+/*=================================nav bar k uppr wala==================================*/
+:root {
+  --primary-black: #000000;
+  --bg-color: #f6eee4;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.announcement-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color);
+  min-height: 41px;
+  width: 100%;
+  overflow: hidden; /* Bahar nikalne wala text hide karne k liye */
+  font-family: var(--font-body);
+}
+
+/* 20% Left Side - No Padding */
+.header-left-contact {
+  flex: 0 0 20%;
+  display: flex;
+  align-items: center;
+  padding-left: 0; /* Side padding khatam */
+  z-index: 10;
+  background-color: var(--bg-color);
+}
+
+.header-left-contact a {
+  text-decoration: none;
+  color: var(--primary-black);
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 60% Center - Ticker Window */
+.ticker-new {
+  flex: 0 0 60%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+.ticker-track span {
+  display: inline-block;
+  padding: 0 30px; /* Text k darmiyan gap */
+  font-size: 12px;
+  color: var(--primary-black);
+}
+
+/* 20% Right Side */
+.header-right-space {
+  flex: 0 0 20%;
+  background-color: var(--bg-color);
+  z-index: 10;
+}
+
+/* Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-left-contact { flex: 0 0 35%; }
+  .ticker-new { flex: 0 0 65%; }
+  .header-right-space { display: none; }
+}
+
+
+
+
+
+
+
+
+
+/*=================================nav bar==================================*/
+/* RESET & FONTS */
+.nutique-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 0 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 3-COLUMN FLEX SYSTEM */
+.nav-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left { justify-content: flex-start; }
+.nav-center { justify-content: center; }
+.nav-right { justify-content: flex-end; }
+
+/* LOGO */
+.logo-img {
+    max-height: 77px;
+    width: auto;
+    display: block;
+}
+
+/* BUTTONS & ICONS */
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Desktop par hidden */
+    padding: 0;
+}
+
+.action-icons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.icon-btn {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.icon-btn:hover { opacity: 0.6; }
+
+/* BADGES (Match your image) */
+.has-badge { position: relative; }
+
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: #c5a059; /* Gold color */
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .mobile-menu-toggle { display: block; }
+    .hide-mobile { display: none; }
+    .nutique-nav { height: 65px; }
+    .logo-img { max-height: 40px; }
+    .action-icons { gap: 12px; }
+}
+
+@media (max-width: 480px) {
+    .nav-col { flex: 0 0 auto; }
+    .nav-center { flex: 1; }
+    .badge { width: 16px; height: 16px; font-size: 9px; right: -8px; }
+}
+
+
+
+
+
+
+
+/*=================================hero section==================================*/
+/* Hero Section Styles */
+.hero-section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f6f1;
+}
+
+.hero-container {
+    width: 100%;
+    /* Laptop/Desktop par fix height */
+    height: 414px; 
+    
+    /* Image Path */
+    background-image: url('assets/hero\ image.jpeg'); 
+    
+    /* Full width cover karne ke liye */
+    background-size: cover; 
+    
+    /* Image ka center focus mein rakhne ke liye */
+    background-position: center center; 
+    background-repeat: no-repeat;
+    
+    /* Smooth transition jab screen size change ho */
+    transition: all 0.3s ease;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* 1. Tablets (iPad etc) */
+@media (max-width: 1024px) {
+    .hero-container {
+        height: 350px;
+    }
+}
+
+/* 2. Mobile Screens */
+@media (max-width: 768px) {
+    .hero-container {
+        /* Mobile par height thodi kam taake image ki aspect ratio sahi lage */
+        height: 250px; 
+        
+        /* Mobile par agar image ka main part (Nutique Logo) side par ho raha ho, 
+           to aap isko 'background-position: 50% 50%' bhi kar sakte hain */
+        background-position: center center;
+    }
+}
+
+/* 3. Small Mobile Screens */
+@media (max-width: 480px) {
+    .hero-container {
+        height: 200px;
+    }
+}
+
+
+
+
+/*=============================chilled tag==============================
+
+
+/* Delivery Notice Styles */
+.delivery-notice-section {
+    width: 100%;
+    margin-bottom: 50px; /* Neeche wale section se gap */
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.delivery-notice-container {
+    max-width: 1200px; /* Aapke product section ki width ke barabar */
+    margin: 0 auto;
+}
+
+.delivery-notice-box {
+    border: 1px solid #edce87; /* Specific Gold Border from your sample */
+    padding: 20px;
+    text-align: center;
+    background-color: #fff; /* Clean white background */
+    margin-top: 50px;
+}
+
+.delivery-notice-box p {
+    margin: 0;
+    color: #4c4c4c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-transform: uppercase; /* Bilkul sample jaisa look */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .delivery-notice-box {
+        padding: 15px;
+        margin-top: 30px;
+    }
+    
+    .delivery-notice-box p {
+        font-size: 12px; /* Mobile par text thoda chota taake 2 lines mein set ho jaye */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================product section==================================*/
+/* Product Section Layout */
+.product-page-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.product-images-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-info-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Sticky Image Logic */
+.sticky-image-wrapper {
+    position: sticky;
+    top: 100px; /* Header ke niche gap */
+}
+
+.main-image-container {
+    position: relative;
+    background: #f9f9f9;
+}
+
+.primary-img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Typography */
+.product-main-title {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 24px;
+    color: #4c4c4c;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Purchase Section */
+.purchase-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.quantity-selector {
+    display: flex;
+    border: 1px solid #ddd;
+    align-items: center;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.qty-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-inner-spin-button { display: none; }
+
+.add-to-cart-btn {
+    flex-grow: 1;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover { background: #333; }
+
+/* Wishlist */
+.wishlist-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Accordions */
+.product-tabs { margin-top: 40px; border-top: 1px solid #eee; }
+
+.accordion {
+    background-color: transparent;
+    color: #444;
+    cursor: pointer;
+    padding: 18px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.accordion:after {
+    content: '\002B';
+    float: right;
+    font-weight: bold;
+}
+
+.active:after { content: "\2212"; }
+
+.panel {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel p { padding: 15px 0; font-size: 14px; color: #777; line-height: 1.5; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-row { flex-direction: column; }
+    .sticky-image-wrapper { position: static; }
+    .product-main-title { font-size: 26px; }
+}
+
+
+
+/*=============================customer reviews section===============================*/
+/* Reviews Section Styles */
+.reviews-section {
+    background-color: #f6eee4 !important; /* Brand theme color */
+    padding: 60px 0;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.reviews-header {
+    margin-bottom: 40px;
+}
+
+.reviews-title {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #313131;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.reviews-hr {
+    width: 50px;
+    border: 1px solid #313131;
+    margin: 10px auto;
+}
+
+/* Horizontal Scroll Slider */
+.reviews-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 15px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+}
+
+.reviews-slider::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.review-card {
+    flex: 0 0 350px; /* Desktop card width */
+    background: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.author-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.review-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #4c4c4c;
+    line-height: 1.6;
+    height: 80px; /* Text box fix height for alignment */
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: #f1c40f; /* Gold color for stars */
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .review-card {
+        flex: 0 0 85%; /* Mobile par card 85% screen cover karega */
+    }
+    
+    .reviews-section {
+        padding: 40px 0;
+    }
+}
+
+
+
+
+/*=================instagram feed section===================*/
+/* Instagram Section */
+.insta-feed-section {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.insta-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.insta-title {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 24px;
+    color: #313131;
+    margin-bottom: 5px;
+}
+
+.insta-handle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #878787;
+    font-weight: 500;
+}
+
+/* Scrollable Grid */
+.insta-grid-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 10px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.insta-grid-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.insta-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.insta-item {
+    flex: 0 0 250px; /* Desktop width */
+    aspect-ratio: 3 / 4; /* As per your sample */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+/* Hover Effect */
+.insta-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .insta-item {
+        flex: 0 0 180px; /* Mobile par images thodi choti */
+    }
+    .insta-title {
+        font-size: 20px;
+    }
+}
+
+
+
+
+/*=============================footer==========================================*/
+/* Footer Main Styles - Light Theme */
+.main-footer {
+    background-color: #f6eee4; /* Aapka bataya hua color */
+    color: #313131; /* Dark text for contrast */
+    padding: 80px 0 30px 0;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid #edce87; /* Top border for separation */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Typography */
+.footer-logo {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 32px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: #222; /* Darker logo */
+}
+
+.footer-heading {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 17px;
+    margin-bottom: 25px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 35px;
+    height: 2px;
+    background-color: #edce87; /* Gold accent line */
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #4c4c4c;
+    margin-bottom: 20px;
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #4c4c4c;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #edce87;
+    padding-left: 5px;
+}
+
+/* Social Icons */
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    color: #313131;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #edce87;
+    transform: translateY(-3px);
+}
+
+/* Newsletter Form */
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-form input {
+    padding: 14px;
+    background: #fff; /* White input on light background */
+    border: 1px solid #dcd3c9;
+    color: #313131;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-form button {
+    padding: 14px;
+    background-color: #313131; /* Black button for contrast */
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    letter-spacing: 1px;
+}
+
+.footer-form button:hover {
+    background-color: #000;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #dcd3c9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 13px;
+    color: #888;
+}
+
+.payment-icons {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #4c4c4c;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-socials {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
