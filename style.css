@@ -413,7 +413,7 @@
 
 .add-to-cart-btn {
     flex-grow: 1;
-    background: #000;
+    background: #313131;
     color: #fff;
     border: none;
     padding: 15px;
@@ -423,7 +423,7 @@
     transition: background 0.3s;
 }
 
-.add-to-cart-btn:hover { background: #333; }
+
 
 /* Wishlist */
 .wishlist-link {
@@ -478,7 +478,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #25D366; /* WhatsApp Green */
+    background-color: #313131; /* WhatsApp Green */
     color: #ffffff !important;
     text-decoration: none;
     padding: 12px 25px;
@@ -486,7 +486,6 @@
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    border-radius: 4px;
     transition: all 0.3s ease;
     flex-grow: 1;
     border: none;
@@ -803,9 +802,7 @@
     letter-spacing: 1px;
 }
 
-.footer-form button:hover {
-    background-color: #000;
-}
+    
 
 /* Bottom Bar */
 .footer-bottom {
