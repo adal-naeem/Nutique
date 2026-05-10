@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutique</title>
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adal-naeem.github.io/Nutique/">
+    <meta property="og:title" content="Nutique">
+    <meta property="og:description" content="WHERE HEALTH MEETS INDULGENCE.">
+    <meta property="og:image" content="https://adal-naeem.github.io/Nutique/assets/brand-image.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://adal-naeem.github.io/Nutique/">
+    <meta property="twitter:title" content="Nutique">
+    <meta property="twitter:description" content="WHERE HEALTH MEETS INDULGENCE.">
+    <meta property="twitter:image" content="https://adal-naeem.github.io/Nutique/assets/brand-image.jpeg">
+    <!-- Corrected FontAwesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts for the exact look -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Montserrat:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <!-- SweetAlert2 Library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <header>
+        <div class="announcement-bar">
+            <div class="header-left-contact">
+                <a href="tel:+923041115257">
+                    <span class="phone-icon">📞</span> +92-318-726-5857
+                </a>
+            </div>
+
+            <div class="ticker-new">
+                <div class="ticker-track">
+                    <span>🌸 Send Her Love! Mother's Day orders are now open—order early!</span>
+                    <span>Enjoy free delivery in Gujrat, Jalalpur &amp; Kharian above Rs. 5,000</span>
+                    <span>🌸 Send Her Love! Mother's Day orders are now open—order early!</span>
+                    <span>Enjoy free delivery in Gujrat, Jalalpur &amp; Kharian above Rs. 5,000</span>
+                </div>
+            </div>
+
+            <div class="header-right-space"></div>
+        </div>
+
+        <nav class="nutique-nav">
+            <div class="nav-container">
+
+                <div class="nav-col nav-left">
+                    <button class="mobile-menu-toggle" id="navMenuBtn">
+                        <svg viewBox="0 0 30 16" width="28">
+                            <rect width="30" height="1.5" fill="black"></rect>
+                            <rect y="7" width="20" height="1.5" fill="black"></rect>
+                            <rect y="14" width="30" height="1.5" fill="black"></rect>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="nav-col nav-center">
+                    <a href="/" class="logo-link">
+                        <img src="../assets/logo.png" alt="NUTIQUE" class="logo-img">
+                    </a>
+                </div>
+
+                <div class="nav-col nav-right">
+                    <div class="action-icons"><!-- Search Icon -->
+                        <button onclick="showPremiumAlert()" class="icon-btn"
+                            style="border: none; background: none; cursor: pointer;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+
+                        <!-- User/Account Icon -->
+                        <button onclick="showPremiumAlert()" class="icon-btn hide-mobile"
+                            style="border: none; background: none; cursor: pointer;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </button>
+
+                        <!-- Wishlist (Heart) Icon -->
+                        <button onclick="showPremiumAlert()" class="icon-btn has-badge"
+                            style="border: none; background: none; cursor: pointer;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                            <span class="badge">0</span>
+                        </button>
+                        <!-- Line 72 ke paas ye dalo -->
+                        <button onclick="showPremiumAlert()" class="icon-btn has-badge"
+                            style="border: none; background: none; cursor: pointer;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                            </svg>
+                            <span class="badge">0</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+
+
+    </header>
+
+
+    <main>
+            <section class="product-page-container">
+                <div class="product-row">
+
+                    <div class="product-images-col">
+                        <div class="sticky-image-wrapper">
+                            <div class="main-image-container">
+                                <img src="https://www.lalschocolates.com/cdn/shop/products/choccoatedalmonds.jpg?v=1672313245"
+                                    alt="Chocolate Coated Almonds" class="primary-img">
+                                <div class="zoom-icon">
+                                    <i class="pe-7s-expand1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-info-col">
+                        <h1 class="product-main-title">Chocolate Coated Peanuts</h1>
+
+                        <div class="product-price">
+                            <span class="money">PKR 1,500</span>
+                        </div>
+
+                        <div class="product-description">
+                            <p>The classic crunch you love, elevated. Our roasted peanuts are dipped in rich dark
+                                chocolate to create a protein-packed treat that satisfies cravings without the guilt. A
+                                kid-favorite travel companion</p>
+                        </div>
+
+                        <div class="purchase-actions">
+                            <div class="quantity-selector">
+                                <button onclick="showPremiumAlert()" type="button" class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input" id="quantity">
+                                <button onclick="showPremiumAlert()" type="button" class="qty-btn plus">+</button>
+                            </div>
+
+                            <button onclick="showPremiumAlert()" type="submit" class="add-to-cart-btn">
+                                ADD TO CART
+                            </button>
+                        </div>
+
+                        <div class="wishlist-wrapper">
+                            <a href="#" class="wishlist-link">
+                                <i class="pe-7s-like"></i> Add To Wishlist
+                            </a>
+                        </div>
+
+                        <div class="product-tabs">
+                            <button class="accordion">Greeting card instructions</button>
+                            <div class="panel">
+                                <p>A complimentary greeting card can be included with each purchase. Limit 180
+                                    characters.
+                                    Specify message at checkout.</p>
+                            </div>
+
+                            <button class="accordion">Disclaimer</button>
+                            <div class="panel">
+                                <p>Nutique may modify packaging slightly based on availability of raw materials while
+                                    maintaining quality.</p>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/923187265856?text=Hi! I want to order Chocolate Coated Peanuts."
+                            class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> ORDER VIA WHATSAPP
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-row">
+
+                <!-- Column 1: Brand Info -->
+                <div class="footer-col brand-info">
+                    <h2 class="footer-logo">NUTIQUE</h2>
+                    <p>Experience the art of luxury chocolate making. Crafted with passion, delivered with care.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a><!-- Instagram Direct Message Link -->
+                        <a href="https://ig.me/m/thenutique" target="_blank" rel="noopener noreferrer" class="icon-btn">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/923187265856?text=Hi!%20I%20want%20to%20get%20more%20info."
+                            target="_blank" rel="noopener noreferrer" class="icon-btn">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Shop All</a></li>
+                        <li><a href="#">Corporate Gifting</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Customer Care -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">Refund & Returns</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col newsletter">
+                    <h4 class="footer-heading">Join Our Newsletter</h4>
+                    <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button onclick="showPremiumAlert()" type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NUTIQUE.</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <span class="cod-text">Cash on Delivery</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+    
+</body>
+</html>

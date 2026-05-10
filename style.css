@@ -317,7 +317,7 @@
 
 
 
-/*=================================product section==================================*/
+/*=================================product section 1==================================*/
 /* Product Section Layout */
 .product-page-container {
     max-width: 1200px;
@@ -502,7 +502,187 @@
     box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
 }
 
+/*==========================product section 2=================================*/
 
+/* Promo Section Styles */
+.nutique-promo-section {
+    padding: 60px 0;
+    background-color: #fff;
+    margin: 50px auto;
+    max-width: 1600px; /* Based on your variable */
+}
+
+.promo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.promo-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px;
+    align-items: center;
+}
+
+.promo-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px; /* Subtle rounding */
+}
+
+.promo-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.promo-title {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.promo-divider {
+    width: 60px;
+    border: none;
+    border-top: 2px solid #e7e7e7; /* Your gold/grey variable */
+    margin: 0 auto 20px;
+}
+
+.promo-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #4c4c4c;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+.promo-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #313131;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 1px solid #000;
+}
+
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .promo-wrapper {
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
+        gap: 30px;
+    }
+    
+    .promo-content {
+        padding: 0;
+    }
+
+    .promo-title {
+        font-size: 24px;
+    }
+}
+/* Custom Section Styles */
+.nutique-category-section {
+    padding: 60px 0;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif; /* Body Font */
+}
+
+.category-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns for Desktop */
+    gap: 30px;
+}
+
+.category-item {
+    text-align: center;
+    overflow: hidden;
+}
+
+.category-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.category-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    aspect-ratio: 2/3; /* Maintain uniform height */
+    object-fit: cover;
+}
+
+/* Hover Effect: Image zoom */
+.category-item:hover .category-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.category-content h3 {
+    font-family: 'Libre Caslon Text', serif; /* Heading Font */
+    font-size: 18px;
+    color: #000;
+    margin: 15px 0 10px;
+    text-transform: uppercase;
+}
+
+.category-content p {
+    font-size: 14px;
+    color: #4c4c4c;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 45px; /* Alignment consistent rakhta hai */
+}
+
+.shop-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #313131;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+
+
+/* Responsive: Mobile optimization */
+@media (max-width: 991px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns for Tablets */
+    }
+}
+
+@media (max-width: 767px) {
+    .category-grid {
+        grid-template-columns: 1fr; /* 1 Column for Mobile */
+    }
+    .nutique-category-section {
+        padding: 40px 0;
+    }
+}
 
 /*=============================customer reviews section===============================*/
 /* Reviews Section Styles */
@@ -802,7 +982,7 @@
     letter-spacing: 1px;
 }
 
-    
+
 
 /* Bottom Bar */
 .footer-bottom {
